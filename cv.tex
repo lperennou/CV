@@ -33,13 +33,13 @@
 
 % Colors for text
 % Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
+%\definecolor{darktext}{HTML}{414141}
 % \definecolor{text}{HTML}{333333}
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{false}
+\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -52,12 +52,14 @@
 \newcommand{\prefixmail}{loic.perennou}
 \newcommand{\suffixmail}{@yahoo.fr}
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[round,right]{photo_osc.jpeg}
-\name{Loïc}{Pérennou, PhD}
-\position{data scientist~~~·~~~french, 28 years old}
-\address{Seoul-si Mapo-gu Yanghwa-ro 26, 307-ho, 04070, Rep. of KOREA}
+\photo[round,right]{photo_osc_small.jpg}
+\name{Loïc}{PÉRENNOU}
+\position{DATA SCIENTIST, PHD, 33 YEARS OLD. CURRENTLY EMPLOYED, WITH 3-MONTHS NOTICE.}
+%\address{Seoul-si Mapo-gu Yanghwa-ro 26, 307-ho, 04070, Rep. of KOREA}
+\address{13003 Marseille, France}
 
-\mobile{(+82) 10-6506-9110}
+%\mobile{(+82) 9716 7446}
+\mobile{(+33) 6 73 44 66 85}
 \email{\prefixmail\suffixmail}
 \homepage{lperennou.github.io}
 \github{lperennou}
@@ -70,10 +72,10 @@
 % \reddit{reddit-id}
 % \medium{madium-id}
 % \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
+% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 
-%\quote{``Be the change that you want to see in the world."}
+% \quote{Be the cahgne}
 
 
 %-------------------------------------------------------------------------------
@@ -95,17 +97,21 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\vspace{-.4cm}
+\vspace{-.2cm}
 \input{summary.tex}
+%\vspace{-.2cm}
 \input{experience.tex}
+%\vspace{-.2cm}
 \input{publications.tex}
+%\vspace{-.2cm}
 \input{education.tex}
+%\vspace{-.2cm}
 %\input{extracurricular.tex}
 %\input{honors.tex}
 %\input{presentation.tex}
 %\input{writing.tex}
 %\input{committees.tex}
-\input{misc.tex}
+%\input{misc.tex}
 
 
 %-------------------------------------------------------------------------------
