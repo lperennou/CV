@@ -17,6 +17,9 @@
 .*sw[op]
 *~
 
+### Build ###
+build/
+
 ### Mac OS X ###
 ## Mac OS X metadata files:
 *.DS_Store

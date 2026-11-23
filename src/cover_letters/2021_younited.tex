@@ -1,0 +1,167 @@
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\newcommand{\prefixmail}{loic.perennou}
+\newcommand{\suffixmail}{@yahoo.fr}
+\photo[circle,noedge,left]{photo_osc_small.jpg}
+\name{Loïc}{Pérennou, PhD}
+\position{data scientist}
+%\address{Seoul-si Mapo-gu Yanghwa-ro 26, 307-ho, 04070, Rep. of KOREA}
+\address{10 rue des Gourmets, 38100 Grenoble, France}
+%\mobile{(+82) 10-6506-9110}
+\mobile{(+33) 6 73 44 66 85}
+\email{\prefixmail\suffixmail}
+\homepage{lperennou.github.io}
+\github{lperennou}
+\linkedin{lperennou}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+%\quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\newcommand{\company}{Younited Credit}
+\newcommand{\recruiterGenre}{Mrs.}
+\newcommand{\recruiterFN}{}
+\newcommand{\recruiter}{}
+\newcommand{\job}{Data Scientist}
+
+\recipient
+{To: recruitment team at \company}
+%{\recruiterGenre~\recruiterFN~\recruiter}
+{~}
+
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for \job~position}
+
+% How the letter is opened
+\letteropening{\\ \\ \vspace{.5cm} Dear Madam or Sir,} % do not use it 
+%\letteropening{\\ \\ \vspace{.5cm} Dear~\recruiterGenre~\recruiter,} % do not use it 
+
+% How the letter is closed
+\letterclosing{Thank you for considering my application with interest.\\Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Loïc Pérennou~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+%\lettersection{About Me}
+%\lettersection{Why Worldquant}
+%\lettersection{Why Me?}
+  \company~is looking for a \job~to help propose financial services tailored to each client and control credit risk.  
+I am very excited to apply, because I am aware of the critical importance of financial services in our modern lives and because my strong analytical and communication skills are a good match for the job. 
+
+While a PhD candidate at Outscale, I used data mining to optimize the allocation of computing resources in cloud infrastructures. 
+Throughout this experience, I acquired the \textbf{organizational best practices} needed to solve data-driven problems.  
+I learned to collect the appropriate data set and to select evaluation metrics before testing any hypotheses. 
+More importantly than exploring a wide range of machine learning models (which I also did), I learned to ask the correct questions when a particular model fails to give encouraging results.  
+%Interestingly, resource allocation in clouds bears similarities with energy trading: traders weigh risk and returns, while a cloud provider must decide when to over-commit resources despite receiving hardly predictable requests. 
+
+Besides the technical and analytical skills, I developed a research mindset combining an \textbf{enthusiasm for collaboration} and perseverance.  
+Doing research taught me not only how to communicate clearly the result of my work, but also how to discuss its limitations and embrace constructive critiques.  
+I acquired this skill the hard way, by submitting my work to peer-reviewed publications until I had addressed all limitations raised by reviewers. 
+
+Two strategic reasons lead me to apply at \company~today.   
+First and foremost, I am attracted by the prospect of working in a dynamic startup that is expanding globally. I expect to benefit a lot from working with fast-paced projects in a rich environment. 
+Secondly, working at \company will give me the chance to contribute to the transformation and democratization of the lending business. 
+%Secondly, I am sure that \company's investments and pledge for carbon neutrality by 2050 will position it favorably to remain a leader in the energy business for the years to come. 
+%global presence and diversified pool of talents make it the ideal place to garner a strong understanding of financial services. 
+%\company~is using digital technology to transform retail for the benefit of both retailers and consumers. 
+
+Working at \company~would be a unique opportunity for me to apply my analytical, organizational and communication skills.  
+I would be delighted to schedule an appointment with you in order to learn more about the specificity of the position, and discuss how my skills could best benefit your team. 
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+\end{document}

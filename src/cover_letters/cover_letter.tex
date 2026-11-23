@@ -1,17 +1,20 @@
+
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
+% Awesome CV LaTeX Template for Cover Letter
 %
 % This template has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
 %
-% Author:
+% Authors:
 % Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
+% Lars Richter <mail@ayeks.de>
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 %
+
+
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
@@ -33,13 +36,13 @@
 
 % Colors for text
 % Uncomment if you would like to specify your own color
-%\definecolor{darktext}{HTML}{414141}
+% \definecolor{darktext}{HTML}{414141}
 % \definecolor{text}{HTML}{333333}
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+\setbool{acvSectionColorHighlight}{false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -49,22 +52,20 @@
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
 \newcommand{\prefixmail}{loic.perennou}
 \newcommand{\suffixmail}{@yahoo.fr}
-% Available options: circle|rectangle,edge/noedge,left/right
-\photo[round,right]{photo_osc_small.jpg}
-\name{Loïc}{PÉRENNOU}
-\position{Lead Data Scientist | PhD}
+\photo[circle,noedge,left]{photo_osc.jpeg}
+\name{Loïc}{Pérennou, PhD}
+%\position{data scientist}
 %\address{Seoul-si Mapo-gu Yanghwa-ro 26, 307-ho, 04070, Rep. of KOREA}
-\address{13003 Marseille, France}
-
-%\mobile{(+82) 9716 7446}
+\address{10 rue des Gourmets, 38100 Grenoble, France}
+%\mobile{(+82) 10-6506-9110}
 \mobile{(+33) 6 73 44 66 85}
 \email{\prefixmail\suffixmail}
-%\homepage{lperennou.github.io}
+\homepage{lperennou.github.io}
 \github{lperennou}
 \linkedin{lperennou}
-%\extrainfo{https://outscale.tv/?s=perennou}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -72,10 +73,36 @@
 % \reddit{reddit-id}
 % \medium{madium-id}
 % \googlescholar{googlescholar-id}{name-to-display}
-% \firstname and \lastname will be used
+%% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
 
-% \quote{Be the cahgne}
+%\quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\newcommand{\company}{Toss}
+\newcommand{\recruiterGenre}{Mrs.}
+\newcommand{\recruiterFN}{Hayoung}
+\newcommand{\recruiter}{Park}
+\newcommand{\job}{Data Scientist}
+\recipient
+ {\recruiterFN~\recruiter}
+ {Recruiting Manager at \company}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for \job}
+% How the letter is opened
+\letteropening{\\ \\ \vspace{.5cm} Dear \recruiterGenre~\recruiter,} % do not use it 
+% How the letter is closed
+\letterclosing{Thank you for considering my application with interest.\\Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
 
 
 %-------------------------------------------------------------------------------
@@ -83,36 +110,31 @@
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[L]
+\makecvheader[R]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Loïc Pérennou~~~·~~~Curriculum Vitae}
-  {\thepage}
+  {Loïc Pérennou~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+%\lettersection{About Me}
+%\lettersection{Why Worldquant}
+%\lettersection{Why Me?}
+\input{2021_Johson.tex}
+\end{cvletter}
 
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\vspace{-.2cm}
-\input{summary.tex}
-%\vspace{-.2cm}
-\input{experience.tex}
-%\vspace{-.2cm}
-\input{publications.tex}
-%\vspace{-.2cm}
-\input{education.tex}
-%\vspace{-.2cm}
-%\input{extracurricular.tex}
-%\input{honors.tex}
-%\input{presentation.tex}
-%\input{writing.tex}
-%\input{committees.tex}
-%\input{misc.tex}
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
 
-
-%-------------------------------------------------------------------------------
 \end{document}
