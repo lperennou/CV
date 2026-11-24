@@ -53,12 +53,10 @@
 \newcommand{\suffixmail}{@yahoo.fr}
 % Available options: circle|rectangle,edge/noedge,left/right
 \photo[round,right]{media/photo_osc_small.jpg}
-\name{Loïc}{PÉRENNOU}
-\position{Lead Data Scientist | PhD}
-%\address{Seoul-si Mapo-gu Yanghwa-ro 26, 307-ho, 04070, Rep. of KOREA}
+\name{Loïc}{PÉRENNOU, PhD}
+\position{Lead Data}
 \address{13003 Marseille, France}
 
-%\mobile{(+82) 9716 7446}
 \mobile{(+33) 6 73 44 66 85}
 \email{\prefixmail\suffixmail}
 %\homepage{lperennou.github.io}
@@ -77,6 +75,18 @@
 
 % \quote{Be the cahgne}
 
+% Define cvitemsplain environment (cvitems without bullet points)
+\newenvironment{cvitemsplain}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=0pt, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{5.0mm}
+}
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -97,9 +107,8 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\vspace{-.2cm}
+\vspace{-0.2cm}
 \input{summary.tex}
-%\vspace{-.2cm}
 \input{experience.tex}
 %\vspace{-.2cm}
 \input{publications.tex}
