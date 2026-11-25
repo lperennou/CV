@@ -41,6 +41,10 @@
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
 
+% Tighten spacing between sections to keep the CV on a single page
+\renewcommand{\acvSectionTopSkip}{1.2mm}
+\renewcommand{\acvSectionContentTopSkip}{1.2mm}
+
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
@@ -54,7 +58,7 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 \photo[round,right]{media/photo_osc_small.jpg}
 \name{Loïc}{PÉRENNOU, PhD}
-\position{Lead Data}
+\position{Senior Full Stack Data Scientist. 35 years old.}
 \address{13003 Marseille, France}
 
 \mobile{(+33) 6 73 44 66 85}
@@ -73,7 +77,7 @@
 % \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 
-% \quote{Be the cahgne}
+% \quote{Be the change}
 
 % Define cvitemsplain environment (cvitems without bullet points)
 \newenvironment{cvitemsplain}{%
@@ -86,7 +90,21 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{5.0mm}
+  \vspace{3.0mm}
+}
+
+% cvitems variant with extra space between bullet points
+\newenvironment{cvitemsspaced}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep]
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{2.5pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{1.0mm}
 }
 
 %-------------------------------------------------------------------------------
@@ -110,6 +128,18 @@
 %-------------------------------------------------------------------------------
 \vspace{-0.2cm}
 \input{summary.tex}
+
+\cvsection{Technical Skills}
+\vspace{0.2cm}
+\fontsize{9pt}{1em}\bodyfontlight\selectfont
+\begin{cvitems}
+  \item{\textbf{Data Engineering:} SQL, dbt, Snowflake, Airflow, Spark}
+  \item{\textbf{ML / Data Science:} Python, scikit-learn, Pandas, PySpark, Snowpark, Dataiku}
+  \item{\textbf{Full Stack / Backend:} Flask, REST APIs, React, Streamlit}
+  \item{\textbf{DevOps / Cloud:} Docker, Kubernetes, AWS, CI/CD, Git}
+  \item{\textbf{Observability:} Grafana, Logmatic, pytest, dbt test}
+\end{cvitems}
+
 \input{experience.tex}
 \input{education.tex}
 \input{publications.tex}
